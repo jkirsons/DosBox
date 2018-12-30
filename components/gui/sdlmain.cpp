@@ -1155,7 +1155,7 @@ static void GUI_StartUp(Section * sec) {
 		}
 	}
 	sdl.desktop.doublebuf=section->Get_bool("fulldouble");
-#if SDL_VERSION_ATLEAST(1, 2, 10)
+#if 1 //SDL_VERSION_ATLEAST(1, 2, 10)
 #ifdef WIN32
 	const SDL_VideoInfo* vidinfo = SDL_GetVideoInfo();
 	if (vidinfo) {
@@ -1885,7 +1885,7 @@ int main(int argc, char* argv[]) {
 	LOG_MSG("---");
 
 	/* Init SDL */
-#if SDL_VERSION_ATLEAST(1, 2, 14)
+#if 1 //SDL_VERSION_ATLEAST(1, 2, 14)
 	/* Or debian/ubuntu with older libsdl version as they have done this themselves, but then differently.
 	 * with this variable they will work correctly. I've only tested the 1.2.14 behaviour against the windows version
 	 * of libsdl
